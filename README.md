@@ -79,12 +79,8 @@ docker exec usagi-postgres psql -U postgres -d usagiAgent -f /tmp/jchatmind.sql
 
 ### 3. 配置 API Key（必做）
 
-仓库不包含 `application.yaml`（真实 Key 不进入版本库），配置模板见
-`usagiAgent/src/main/resources/application.example.yaml`，复制一份改名为 `application.yaml` 后填写：
-
-```bash
-cp usagiAgent/src/main/resources/application.example.yaml usagiAgent/src/main/resources/application.yaml
-```
+仓库不包含 `application.yaml`（真实 Key 不进入版本库）。首次部署时在
+`usagiAgent/src/main/resources/` 下新建 `application.yaml` 并填入以下配置：
 
 ```yaml
 spring:
@@ -165,7 +161,6 @@ npm run preview      # 本地预览构建产物
 │   │   └── model/               # 实体 / DTO / 请求响应
 │   └── src/main/resources/
 │       ├── application.yaml     # 核心配置（数据库、模型 API Key，不入库）
-│       ├── application.example.yaml  # 配置模板（占位符）
 │       └── db/jchatmind.sql     # 建表脚本（首次部署执行）
 └── README.md                    # 本文档
 ```
