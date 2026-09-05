@@ -21,6 +21,8 @@ usagiAgent/data/
 *.swp
 .DS_Store
 Thumbs.db
+~$*
+*.docx~
 
 # === 日志与临时文件 ===
 *.log
